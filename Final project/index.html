@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>        
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale="1">
+    <title>project 3  -Juwon Park</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/nationalpark.css">
+    </head>
+    <body>
+      <style type="text/css">
+        .jumbotron {
+         background-image: url('sky.jpg');
+         background-size: cover;
+         text-shadow: black 0.2em 0.2em 0.2em;
+         color: white;
+        }
+      </style>
+       <nav class="navbar navbar-default">
+         <div class="container-fluid">
+           <div class="navbar-header">
+             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" 
+             data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+           <span class="sr-only"></span>
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+           </button>
+           <a class="navbar-brand" herf="index.html">National Park</a>
+           </div>
+           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+             <ul class="nav navbar-nav">
+               <li class="active"><a href="index.html">Home<span class="sr-only"></span></a></li>
+               <li><a href="about.html">About</a></li>
+               <li class="dropdown">
+                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                    aria-haspopup="true" aria-expanded="false">Service<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="service.html?serviceName=Yellowstone">Yellowstone</a></li>
+                      <li><a href="service.html?serviceName=Yosemite">Yosemite</a></li>
+                      <li><a href="service.html?serviceName=Grand Canyon">Grand Canyon</a></li>
+                    </ul>
+               </li>
+             </ul>
+             <form class="navbar-form navbar-left"> 
+               <div class="form-group">
+                 <input type="text" class="form-control" placeholder="Search for this website">
+               </div>
+               <button type="submit" class="btn btn-default">Search</button>
+             </form>
+             <ul class="nav navbar-nav navbar-right">
+               <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                  aria-haspopup="true" aria-expanded="false">Connect<span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="loginForm.html">Login</a></li>
+                    <li><a href="registerForm.html">Register</a></li>
+                  </ul>
+               </li>
+             </ul>
+           </div>
+         </div>
+       </nav>
+
+
+       <div class="animation1">
+        <h3>The Best National Parks</h3>
+        </div>
+
+
+       <div class="slideshow-container">
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+          <img src="Yellowstone2.jpg" style="width: 1000px;">
+          <div class="text">Yellowstone</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+          <img src="Yosemite2.jpg" style="width: 1000px;">
+          <div class="text">Yosemite</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <img src="GrandCanyon2.jpg" style="width:1000px;">
+          <div class="text">Grand Canyon</div>
+        </div>
+        
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+        </div>
+        
+        <script>
+        var slideIndex = 0;
+        showSlides();
+        
+        function showSlides() {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("dot");
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {slideIndex = 1}    
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+          setTimeout(showSlides, 2000); 
+        }
+        </script>
+
+
+      <div class="container">
+        <div class ="jumbotron">
+          <h1 class="text-center">National Park</h1>
+          <p class="text-center">National parks are designated for their natural beauty, unique geological features, diverse ecosystems, and recreational opportunities.</p>
+          <p class="text-center"><a class="btn btn-primary btn-lg" href="service.html" role="button">Enter</a></p>
+        </div>
+        <div class"row">
+          <div class="col-md-4">
+            <h4>Yellowstone</h4>
+            <p>Yellowstone National Park is an American national park located in the western United States, largely in the northwest corner of Wyoming.</p>
+            <p><a class="btn btn-default" data-target="#Yellowstone" data-toggle="modal">Learn More</a></p>
+          </div>
+          <div class="col-md-4">
+            <h4>Yosemite</h4>
+            <p>Yosemite National Park is an American national park in California, surrounded on the southeast by Sierra National Forest. </p>
+            <p><a class="btn btn-default" data-target="#Yosemite" data-toggle="modal">Learn More</a></p>
+          </div>
+          <div class="col-md-4">
+            <h4>Grand Canyon</h4>
+            <p>Grand Canyon National Park is located in Arizona, Grand Canyon National Park encompasses 277 miles of the Colorado River and adjacent uplands.</p>
+            <p><a class="btn btn-default" data-target="#Grand" data-toggle="modal">Learn More</a></p>
+          </div>
+        </div>
+      </div>
+      <br>
+      <br>
+      <div id="rn_footer_11" class="rn_footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-lg-9">
+              <p class="copyright">2021 Juwon Park</p>
+              <p class="info-links">
+                <a href="mailto:juwon.park@lc.cuny.edu" target=_blank>Email</a>
+                <a href="tel:7186316262" onclick="return hasTelSupport();">Phone number<span class="sr-only">link works on mobile devices or browsers that support dialing</span></a>
+                <a href="https://goo.gl/maps/AMKm9e6z1facEiWw5" target=_blank>Address</a>
+              </p>
+            </div>
+            <div class="social-links col-12 col-lg-3 d-none d-lg-flex">
+              <a href="https://www.facebook.com" target=_blank><img src="facebook.png" alt="Facebook" /></a>
+              <a href="https://www.twitter.com" target=_blank><img src="twitter.png" alt="Twitter" /></a>
+              <a href="https://www.pinterest.com" target=_blank><img src="pin.png" alt="Pintrest" /></a>
+              <a href="https://www.instagram.com" target=_blank><img src="instagram(2).png" alt="Instagram" /></a>
+              <a href="https://www.youtube.com" target=_blank><img src="youtube.png" alt="Youtube" /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="modal" id="Yellowstone" tabindex="-1">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                Yellowstone
+                <button class="close" data-dismiss="modal">&times;</button>
+              </div>
+              <div class="modal-body" style="text-align: center;">
+                Yellowstone was the first national park in the U.S. and is also widely held to be the first national park in the world.<br>
+                The park is known for its wildlife and its many geothermal features, especially Old Faithful geyser, one of its most popular.<br><br>
+                <img src="Yellowstone.jpg" id="imagepreview" style="width: 256px; height: 256px;">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="modal" id="Yosemite" tabindex="-1">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                Yosemite
+                <button class="close" data-dismiss="modal">&times;</button>
+              </div>
+              <div class="modal-body" style="text-align: center;">
+                Yosemite is one of the largest and least fragmented habitat blocks in the Sierra Nevada, and the park supports a diversity of plants and animals. <br>
+                The park has an elevation range from 2,127 to 13,114 feet and contains five major vegetation zones: chaparral and oak woodland.<br><br>
+                <img src="Yosemite.jpg" id="imagepreview" style="width: 256px; height: 256px;">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="modal" id="Grand" tabindex="-1">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                Grand Canyon
+                <button class="close" data-dismiss="modal">&times;</button>
+              </div>
+              <div class="modal-body" style="text-align: center;">
+                The Grand Canyon is known for its visually overwhelming size and its intricate and colorful landscape.  <br>
+                Geologically, it is significant because of the thick sequence of ancient rocks that are well preserved and exposed in the walls of the canyon.<br><br>
+                <img src="GrandCanyon.jpg" id="imagepreview" style="width: 256px; height: 256px;">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+      <script src="js/bootstrap.js"></script>
+     </body>
+</html>
